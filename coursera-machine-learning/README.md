@@ -1,6 +1,10 @@
+# Coursera: Machine Learning
+
 My work on the programming assignments from [Andrew Ng's "Machine Learning" course on Coursera](https://www.coursera.org/course/ml) (mid-2016 session).
 
 No [fancy](https://github.com/kaleko/CourseraML) [stuff](https://github.com/faridcher/MachineLearningMOOC), just plain old MATLAB.
+
+## Contents
 
 - [Assignment 1](machine-learning-ex1) (Week 2): Linear Regression
 - [Assignment 2](machine-learning-ex2) (Week 3): Logistic Regression
