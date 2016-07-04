@@ -62,20 +62,24 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+temp = eye(num_labels);
+y = temp(y,:);
 
+% Part 1: Feedforward
 
+X = [ones(m, 1) X];
+h1 = sigmoid(X * Theta1');
+h1 = [ones(m, 1) h1];
+h = sigmoid(h1 * Theta2');
 
+lf = -y .* log(h) - (1 - y) .* log(1 - h);
 
+J = (1 / m) * sum(sum(lf));
+temp1 = Theta1(:, 2:end);
+temp2 = Theta2(:, 2:end);
+J = J + (lambda / (2 * m)) * (sum(sum(temp1.^2)) + (sum(sum(temp2.^2))));
 
-
-
-
-
-
-
-
-
-
+% Part 2: 
 
 
 
@@ -86,6 +90,5 @@ Theta2_grad = zeros(size(Theta2));
 
 % Unroll gradients
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
-
 
 end
