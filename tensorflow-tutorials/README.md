@@ -1,8 +1,8 @@
 # Tensorflow Tutorials
 
-My work on [TensorFlow's (r0.9) tutorials](https://www.tensorflow.org/versions/r0.9/tutorials/mnist/beginners/index.html)
+My work on [TensorFlow's tutorials](https://www.tensorflow.org/versions/master/tutorials/index.html).
 
 ## Contents
 
-- [tut1-mnist-beginner](tut1-mnist-beginner): [MNIST For ML Beginners](https://www.tensorflow.org/versions/r0.9/tutorials/mnist/beginners/index.html)
-- [tut2-mnist-expert](tut2-mnist-expert): [Deep MNIST for Experts](https://www.tensorflow.org/versions/r0.9/tutorials/mnist/pros/index.html)
+- [tut1-mnist-beginner](tut1-mnist-beginner): Work on the tutorial [MNIST For ML Beginners](https://www.tensorflow.org/versions/master/tutorials/mnist/beginners/index.html)
+- [tut2-mnist-expert](tut2-mnist-expert): Work on the tutorial [Deep MNIST for Experts](https://www.tensorflow.org/versions/master/tutorials/mnist/pros/index.html)
