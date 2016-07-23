@@ -68,9 +68,12 @@ y = temp(y,:);
 % Part 1: Feedforward
 
 X = [ones(m, 1) X];
-h1 = sigmoid(X * Theta1');
-h1 = [ones(m, 1) h1];
-h = sigmoid(h1 * Theta2');
+a1 = X;
+z2 = a1 * Theta1';
+a2 = [ones(m, 1) sigmoid(z2)];
+z3 = a2 * Theta2';
+a3 = sigmoid(z3);
+h = a3;
 
 lf = -y .* log(h) - (1 - y) .* log(1 - h);
 
@@ -79,10 +82,28 @@ temp1 = Theta1(:, 2:end);
 temp2 = Theta2(:, 2:end);
 J = J + (lambda / (2 * m)) * (sum(sum(temp1.^2)) + (sum(sum(temp2.^2))));
 
-% Part 2: 
+% Part 2: Backprop
 
+delta3 = h - y;
+z2 = [ones(m,1) z2];
+delta2 = delta3 * Theta2 .* sigmoidGradient(z2);
+delta2 = delta2(:,2:end);
 
+if ~exist('Delta1', 'var')
+    Delta1 = 0;
+end
+if ~exist('Delta2', 'var')
+    Delta2 = 0;
+end
+Delta1 = Delta1 + delta2' * a1;
+Delta2 = Delta2 + delta3' * a2;
 
+Theta1_grad = (1 / m) * Delta1;
+Theta2_grad = (1 / m) * Delta2;
+
+% Regularization
+Theta1_grad(1:end,2:end) = Theta1_grad(1:end,2:end) + (lambda / m) * Theta1(1:end,2:end);
+Theta2_grad(1:end,2:end) = Theta2_grad(1:end,2:end) + (lambda / m) * Theta2(1:end,2:end);
 
 % -------------------------------------------------------------
 
