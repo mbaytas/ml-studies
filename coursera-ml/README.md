@@ -11,6 +11,6 @@ No [fancy](https://github.com/kaleko/CourseraML) [stuff](https://github.com/fari
 - [Assignment 3](machine-learning-ex3) (Week 4): Multi-class Classification and Neural Networks
 - [Assignment 4](machine-learning-ex4) (Week 5): Neural Network Learning
 - [Assignment 5](machine-learning-ex5) (Week 6): Regularized Linear Regression and Bias/Variance
-- Assignment 6 (Week 7): Support Vector Machines
-- Assignment 7 (Week 8): K-Means Clustering and PCA
-- Assignment 8 (Week 9): Anomaly Detection and Recommender Systems
+- [Assignment 6](machine-learning-ex6) (Week 7): Support Vector Machines
+- [Assignment 7](machine-learning-ex7) (Week 8): K-Means Clustering and PCA
+- [Assignment 8](machine-learning-ex8) (Week 9): Anomaly Detection and Recommender Systems

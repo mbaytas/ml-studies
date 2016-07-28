@@ -23,11 +23,26 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
+vals = [0.01 0.03 0.1 0.3 1 3 10 30];
 
+results = [];
 
+for C = vals
+    for sigma = vals
+        model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
+        h = svmPredict(model, Xval);
+        err = mean(double(h ~= yval));
+        result.C = C;
+        result.sigma = sigma;
+        result.err = err;
+        results = [results result];
+    end
+end
 
+[err, i] = min([results.err]);
 
-
+C = results(i).C;
+sigma = results(i).sigma;
 
 % =========================================================================
 

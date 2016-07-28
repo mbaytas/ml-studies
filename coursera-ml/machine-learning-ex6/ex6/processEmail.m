@@ -86,8 +86,7 @@ while ~isempty(email_contents)
     %               should add the index of the word to the word_indices
     %               vector. Concretely, if str = 'action', then you should
     %               look up the vocabulary list to find where in vocabList
-    %               'action' appears. For example, if vocabList{18} =
-    %               'action', then, you should add 18 to the word_indices 
+    %               'action' appears. For example, strcmp(str1, str2), then, you should add 18 to the word_indices 
     %               vector (e.g., word_indices = [word_indices ; 18]; ).
     % 
     % Note: vocabList{idx} returns a the word with index idx in the
@@ -96,15 +95,12 @@ while ~isempty(email_contents)
     % Note: You can use strcmp(str1, str2) to compare two strings (str1 and
     %       str2). It will return 1 only if the two strings are equivalent.
     %
-
-
-
-
-
-
-
-
-
+    
+    for i = 1:length(vocabList)
+        if (strcmp(str, vocabList(i)))
+			word_indices = [word_indices ; i];
+        end
+    end
 
     % =============================================================
 
