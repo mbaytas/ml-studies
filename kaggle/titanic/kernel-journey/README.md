@@ -1,0 +1,1 @@
+Fork of [Omar El Gabry](https://www.kaggle.com/omarelgabry)'s "[A Journey through Titanic](https://www.kaggle.com/omarelgabry/titanic/a-journey-through-titanic)" kernel on Kaggle.
